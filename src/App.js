@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Parent from './Parent';
+import ValueContext from './ValueContext';
 
 function App() {
+
+  //let [number, setNumber] = useState(45);
+
+  // increaseNum = () => setNumber(number++);
+  // decreaseNum = () => setNumber(number--); 
+
+  let value = useState(50);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+      //<ValueContext.Provider value={45}>
+      <ValueContext.Provider value={value}>
+        <div>
+        <Parent/>
+
+        </div>
+
+        </ValueContext.Provider>
+      //</ValueContext.Provider>
+      // {/* <ValueContext.Provider value={78}>
+      //   <Parent/>
+      // </ValueContext.Provider> */}
+
+      // {/* Hello World! */}
+      
+      // {/* <button onClick={ () => setNumber(++number) }>Click to INCREASE Number</button><br/> */}
+      // {/* <button onClick={ () => setNumber(--number) }>Click to DECREASE Number</button> */}
+
+    
+    
+  )
 }
 
 export default App;
