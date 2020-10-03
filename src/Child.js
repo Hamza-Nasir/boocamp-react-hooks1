@@ -8,7 +8,7 @@ function Child(props) {
     return (
         <div>
             Hello from the CHILD! Number = {value[0]}<br/>
-            <button onClick={()=>{value[1](--value[0])}}>Decrease the number</button>
+            <button onClick={()=>{value[1](++value[0])}}>Increase the number</button>
         </div>
     )
 }

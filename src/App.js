@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Parent from './Parent';
 import ValueContext from './ValueContext';
+import numberReducer from './numberReducer';
 
 function App() {
 
